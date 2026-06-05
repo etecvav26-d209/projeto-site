@@ -1,3 +1,8 @@
+## Tema do projeto
+
+ O projeto consiste no desenvolvimento de uma confeitaria temática inspirada na cultura e na gastronomia francesa. Seu principal diferencial é a oferta de doces típicos da confeitaria francesa, sem deixar de incluir doces tradicionais brasileiros. Dessa forma, busca proporcionar aos clientes uma experiência que combina a confeitaria francesa com os sabores familiares da culinária brasileira.
+
+
 ## Objetivo do projeto.
 
 O objetivo deste projeto é desenvolver um site com foco principal na experiência mobile, proporcionando praticidade, sofisticação e fácil acesso aos produtos oferecidos pela confeitaria *Noir and Sugar*.
