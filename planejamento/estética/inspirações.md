@@ -6,7 +6,7 @@ As cores utilizadas serão baseadas na regra 60-30-10 sendo:
 30% (cor secundária): Pastel Pink #F8C8DC
 10% (Cor destaque): Dark Chocolate #332421
 
-## Conceito mobile first.
+## Conceito Mobile First.
 
 O conceito Mobile First foi escolhido para o nosso projeto porque a maioria das pessoas acessa sites por meio de smartphones. Como nosso objetivo é facilitar o acesso aos produtos e proporcionar uma experiência agradável aos clientes, é fundamental que o site seja fácil de navegar, tenha boa organização e ofereça uma visualização adequada em dispositivos móveis.
 
