@@ -16,3 +16,12 @@ A proposta é fazer com que o cliente leve um pedaço da atmosfera aconchegante,
 ## Público alvo.
 
 O público alvo é bem amplo em quesito de idade e gênero, porém focado para pessoas que tenham interesse pela confeitaria francesa ou buscam doces mais sofisticados. O consumo além de ser focado no própio estabelecimento, também atende pedidos grandiosos para eventos o que abrange outros públicos.
+
+## Estrutura do site.
+
+### Página inicial
+
+ O objetivo é apresentar a marca, chamar atenção e direcionar o cliente para os produtos.
+ Os elementos serão a logo, o menu de navegação, os produtos mais comprados, destaque no botão que leva para o cardápio e promoções.
+
+
