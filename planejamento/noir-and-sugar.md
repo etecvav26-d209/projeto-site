@@ -22,15 +22,18 @@ O público alvo é bem amplo em quesito de idade e gênero, porém focado para p
 ### Página inicial
 
  O objetivo é apresentar a marca, chamar atenção e direcionar o cliente para os produtos.
+
  Os elementos serão a logo, o menu de navegação, os produtos mais comprados, destaque no botão que leva para o cardápio e promoções.
 
 ### Cardápio
 
  O objetivo é exibir todos os produtos disponíveis na confeitaria.
+
  Os elementos serão os doces e bebidas.
 
 ### Encomendas
 
  O objetivo é selecionar os produtos e uma parte para pedidos grandes (acima de 20 unidades).
+ 
  Os elementos serão o "carrinho" e as encomendas personalizadas.
 
