@@ -15,4 +15,4 @@ A proposta é fazer com que o cliente leve um pedaço da atmosfera aconchegante,
 
 ## Público alvo.
 
-O público alvo é bem amplo, apenas focado para pessoas que tenham interesse pela confeitaria francesa ou buscam doces mais sofisticados. O consumo além de ser focado no própio estabelecimento, também atende pedidos grandiosos para eventos o que abrange outros públicos.
+O público alvo é bem amplo em quesito de idade e gênero, porém focado para pessoas que tenham interesse pela confeitaria francesa ou buscam doces mais sofisticados. O consumo além de ser focado no própio estabelecimento, também atende pedidos grandiosos para eventos o que abrange outros públicos.
