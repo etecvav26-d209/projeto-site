@@ -25,22 +25,31 @@ O público alvo é bem amplo em quesito de idade e gênero, porém focado para p
 
  Os elementos serão a logo, o menu de navegação, os produtos mais comprados, destaque no botão que leva para o cardápio e promoções.
 
+ ### Galeria
+
+ O objetivo é mostrar o nosso trabalho visualmente, com todos nossos doces e espaço.
+
+ Os elementos serão as fotos e descrição da imagem com uma breve apresentação do produto, qual a ser clicado é direcionado onde se encontra no cardápio. 
+
 ### Cardápio
 
  O objetivo é exibir todos os produtos disponíveis na confeitaria.
 
  Os elementos serão os doces e bebidas.
 
-### Galeria
-
- O objetivo é mostrar o nosso trabalho visualmente, com todos nossos doces e espaço.
-
- Os elementos serão as fotos e descrição da imagem com uma breve apresentação do produto, qual a ser clicado é direcionado onde se encontra no cardápio. 
-
 ### Encomendas
 
  O objetivo é selecionar os produtos e uma parte para pedidos grandes (acima de 20 unidades).
  
  Os elementos serão o "carrinho" e as encomendas personalizadas.
+
+ ### Menu
+
+ #### Loja física
+  #### sobre nós
+ #### Página do login
+  #### Ajuda
+  
+
 
 
