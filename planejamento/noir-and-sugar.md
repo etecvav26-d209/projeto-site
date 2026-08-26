@@ -47,7 +47,8 @@ O público alvo é bem amplo em quesito de idade e gênero, porém focado para p
 
  #### Loja física
   #### sobre nós
- #### Página do login
+ #### Página do login/perfil
+ #### acessibilidade
   #### Ajuda
   
 
