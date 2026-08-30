@@ -7,7 +7,7 @@
 
     <title>Noir & Sugar</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/projeto-site/css/style.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 <header class="header">
 
 <div class="logo">   
-        <img src="logo/logo-sem-fundo.png" alt="Logo Noir & Sugar">
+        <img src="/projeto-site/logo/logo-sem-fundo.png" alt="Logo Noir & Sugar">
 </div>
 
  <nav class="nav">
