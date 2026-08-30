@@ -60,6 +60,27 @@ section {
     margin-bottom: 30px;
 }
 
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.admin-menu a {
+    display: block;
+    padding: 15px;
+    background-color: #F8C8DC;
+    color: #332421;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.admin-menu a:hover {
+    background-color: #332421;
+    color: #F5F5DC;
+}
+
 .footer {
     padding: 20px;
     text-align: center;
