@@ -14,6 +14,9 @@
 
 <header class="header">
 
+<div class="logo">   
+        <img src="img/logo/logo.png" alt="Logo Noir & Sugar">
+</div>
 
 </header>
 
