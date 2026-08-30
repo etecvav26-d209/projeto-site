@@ -48,6 +48,18 @@ section {
     padding: 40px 20px;
 }
 
+.admin-painel {
+    text-align: center;
+}
+
+.admin-painel h1 {
+    margin-bottom: 15px;
+}
+
+.admin-painel p {
+    margin-bottom: 30px;
+}
+
 .footer {
     padding: 20px;
     text-align: center;
