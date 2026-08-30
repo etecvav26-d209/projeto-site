@@ -10,5 +10,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
     $tipo = $_POST['tipo'];
+
+     $sql = "INSERT INTO usuarios
+        (nome, email, senha, tipo)
+        VALUES
+        (:nome, :email, :senha, :tipo)";
+
 }
 ?>
