@@ -27,5 +27,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     ]);
 
+      $id = $conexao->lastInsertId();
+
+    if($id) {
+
+        echo "Usuário cadastrado com sucesso! ID: " . $id;
+
+    }
+
 }
+
 ?>
