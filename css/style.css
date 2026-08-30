@@ -14,3 +14,10 @@ body {
     padding: 20px;
     background-color: #F8C8DC;
 }
+
+.logo img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
