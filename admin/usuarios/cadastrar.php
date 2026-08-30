@@ -16,5 +16,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         VALUES
         (:nome, :email, :senha, :tipo)";
 
+ $stmt = $conexao->prepare($sql);
+
+    $stmt->execute([
+
+        ':nome' => $nome,
+        ':email' => $email,
+        ':senha' => $senha,
+        ':tipo' => $tipo
+
+    ]);
+
 }
 ?>
