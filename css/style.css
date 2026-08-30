@@ -38,3 +38,10 @@ body {
 .nav a:hover {
     background-color: #F5F5DC;
 }
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #F8C8DC;
+    color: #332421;
+}
