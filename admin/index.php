@@ -12,5 +12,22 @@ require_once "../includes/header.php";
         Selecione uma opção.
     </p>
 
+     <div class="admin-menu">
+
+        <a href="usuarios/cadastrar.php">
+            Usuários
+        </a>
+
+        <a href="produtos/cadastrar.php">
+            Produtos
+        </a>
+
+        <a href="pedidos/visualizar.php">
+            Pedidos
+        </a>
+
+    </div>
+
+
 
 </section>
