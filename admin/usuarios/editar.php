@@ -85,4 +85,30 @@ try {
 
     <br><br>
 
+     <select name="tipo" required>
+
+        <option
+            value="cliente"
+            <?php
+            if($usuario['tipo'] == 'cliente') {
+                echo 'selected';
+            }
+            ?>
+        >
+            Cliente
+        </option>
+
+        <option
+            value="admin"
+            <?php
+            if($usuario['tipo'] == 'admin') {
+                echo 'selected';
+            }
+            ?>
+        >
+            Administrador
+        </option>
+
+    </select>
+
 </form>
