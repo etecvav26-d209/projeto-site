@@ -14,4 +14,9 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
+<h2>Lista de Usuários</h2>
+
+<a href="cadastrar.php">
+    Cadastrar Usuário
+</a>
 
