@@ -112,3 +112,21 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         placeholder="Senha"
         required
     >
+
+     <br><br>
+
+    <select name="tipo" required>
+
+        <option value="">Selecione o tipo</option>
+
+        <option value="cliente">
+            Cliente
+        </option>
+
+        <option value="admin">
+            Administrador
+        </option>
+
+    </select>
+    
+</form>
