@@ -136,5 +136,84 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome'])) {
     >
 
     <br><br>
-    
+
+<p>Imagem atual:</p>
+
+    <img
+        src="../../<?php echo $produto['imagem']; ?>"
+        width="150"
+    >
+
+    <br><br>
+
+    <input
+        type="file"
+        name="imagem"
+        accept="image/*"
+    >
+
+    <br><br>
+
+    <select name="categoria" required>
+
+        <option value="Doces Franceses"
+            <?php if($produto['categoria'] == 'Doces Franceses') echo 'selected'; ?>>
+            Doces Franceses
+        </option>
+
+        <option value="Doces Tradicionais"
+            <?php if($produto['categoria'] == 'Doces Tradicionais') echo 'selected'; ?>>
+            Doces Tradicionais
+        </option>
+
+        <option value="Docinhos para Eventos"
+            <?php if($produto['categoria'] == 'Docinhos para Eventos') echo 'selected'; ?>>
+            Docinhos para Eventos
+        </option>
+
+        <option value="Bolos para Eventos"
+            <?php if($produto['categoria'] == 'Bolos para Eventos') echo 'selected'; ?>>
+            Bolos para Eventos
+        </option>
+
+        <option value="Kits para Eventos"
+            <?php if($produto['categoria'] == 'Kits para Eventos') echo 'selected'; ?>>
+            Kits para Eventos
+        </option>
+
+        <option value="Bebidas"
+            <?php if($produto['categoria'] == 'Bebidas') echo 'selected'; ?>>
+            Bebidas
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <select name="disponivel" required>
+
+        <option value="1"
+            <?php if($produto['disponivel'] == 1) echo 'selected'; ?>>
+            Disponível
+        </option>
+
+        <option value="0"
+            <?php if($produto['disponivel'] == 0) echo 'selected'; ?>>
+            Indisponível
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <button type="submit">
+        Salvar
+    </button>
+
 </form>
+
+<?php
+
+include '../../includes/footer.php';
+
+?>
