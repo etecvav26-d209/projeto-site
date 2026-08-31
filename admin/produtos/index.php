@@ -83,3 +83,30 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </button>
 
         </form>
+
+        <form method="POST" action="excluir.php">
+
+            <input
+                type="hidden"
+                name="id"
+                value="<?php echo $produto['id']; ?>"
+            >
+
+            <button type="submit">
+                Excluir
+            </button>
+
+        </form>
+
+        <hr>
+
+    </div>
+
+<?php } ?>
+
+
+<?php
+
+include '../../includes/footer.php';
+
+?>
