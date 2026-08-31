@@ -89,7 +89,13 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </tr>
 
         <?php } ?>
-        
+
 </table>
+
+<?php
+
+include '../../includes/footer.php';
+
+?>
 
 
