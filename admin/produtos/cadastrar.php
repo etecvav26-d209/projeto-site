@@ -71,6 +71,42 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <form method="POST" enctype="multipart/form-data">
 
+  <input
+        type="text"
+        name="nome"
+        placeholder="Nome do produto"
+        required
+    >
+
+    <br><br>
+
+    <textarea
+        name="descricao"
+        placeholder="Descrição do produto"
+        required
+    ></textarea>
+
+    <br><br>
+
+     <input
+        type="number"
+        step="0.01"
+        name="preco"
+        placeholder="Preço"
+        required
+    >
+
+    <br><br>
+
+    <input
+        type="file"
+        name="imagem"
+        accept="image/*"
+        required
+    >
+
+    <br><br>
+
 </form>
 
 
