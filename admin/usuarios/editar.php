@@ -11,4 +11,11 @@ if(isset($_POST['id'])) {
 
 $sql = "SELECT * FROM usuarios WHERE id = :id";
 
+$stmt = $conexao->prepare($sql);
+
+$stmt->execute([
+
+    ':id' => $id
+
+]);
 ?>
