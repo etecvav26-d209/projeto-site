@@ -105,4 +105,36 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome'])) {
 
 <form method="POST" enctype="multipart/form-data">
 
+ <input
+        type="hidden"
+        name="id"
+        value="<?php echo $produto['id']; ?>"
+    >
+
+    <input
+        type="text"
+        name="nome"
+        value="<?php echo $produto['nome']; ?>"
+        required
+    >
+
+    <br><br>
+
+    <textarea
+        name="descricao"
+        required
+    ><?php echo $produto['descricao']; ?></textarea>
+
+    <br><br>
+
+    <input
+        type="number"
+        step="0.01"
+        name="preco"
+        value="<?php echo $produto['preco']; ?>"
+        required
+    >
+
+    <br><br>
+    
 </form>
