@@ -21,5 +21,52 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $caminhoBanco = 'imagens/doces/' . $nomeImagem;
 
+      if(move_uploaded_file($imagem['tmp_name'], $caminho)) {
+
+        $sql = "INSERT INTO produtos
+            (nome, descricao, preco, imagem, categoria, disponivel)
+            VALUES
+            (:nome, :descricao, :preco, :imagem, :categoria, :disponivel)";
+
+        $stmt = $conexao->prepare($sql);
+
+        try {
+
+            $stmt->execute([
+
+                ':nome' => $nome,
+                ':descricao' => $descricao,
+                ':preco' => $preco,
+                ':imagem' => $caminhoBanco,
+                ':categoria' => $categoria,
+                ':disponivel' => $disponivel
+
+            ]);
+
+            $id = $conexao->lastInsertId();
+
+            if($id) {
+
+                echo "Produto cadastrado com sucesso! ID: " . $id;
+
+            }
+
+        } catch(PDOException $erro) {
+
+            echo "Não foi possível cadastrar o produto.";
+
+        }
+
+    } else {
+
+        echo "Não foi possível enviar a imagem.";
+
+    }
+
 }
+
 ?>
+
+
+
+
