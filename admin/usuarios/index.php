@@ -20,3 +20,15 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
     Cadastrar Usuário
 </a>
 
+<table border="1">
+
+    <tr>
+
+        <th>ID</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Tipo</th>
+        <th>Ações</th>
+
+    </tr>
+
