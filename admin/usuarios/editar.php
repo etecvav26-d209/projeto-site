@@ -56,3 +56,9 @@ try {
 
 }
 ?>
+
+<h2>Editar Usuário</h2>
+
+<form method="POST">
+
+</form>
