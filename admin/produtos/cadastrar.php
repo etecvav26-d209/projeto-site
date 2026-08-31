@@ -67,6 +67,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 
+<h2>Cadastrar Produto</h2>
 
+<form method="POST" enctype="multipart/form-data">
+
+</form>
 
 
