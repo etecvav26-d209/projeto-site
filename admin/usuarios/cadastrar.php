@@ -128,5 +128,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         </option>
 
     </select>
+
+    <br><br>
+
+    <button type="submit">
+        Cadastrar
+    </button>
     
 </form>
