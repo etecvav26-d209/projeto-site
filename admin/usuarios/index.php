@@ -32,3 +32,27 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     </tr>
 
+
+    <?php foreach($usuarios as $usuario) { ?>
+
+        <tr>
+
+            <td>
+                <?php echo $usuario['id']; ?>
+            </td>
+
+            <td>
+                <?php echo $usuario['nome']; ?>
+            </td>
+
+            <td>
+                <?php echo $usuario['email']; ?>
+            </td>
+
+            <td>
+                <?php echo $usuario['tipo']; ?>
+            </td>
+
+            <td>
+
+<?php } ?>
