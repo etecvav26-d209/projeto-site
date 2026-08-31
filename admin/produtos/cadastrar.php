@@ -17,9 +17,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $nomeImagem = $imagem['name'];
 
-    $caminho = '../../img/produtos/' . $nomeImagem;
+    $caminho = '../../imagens/doces/' . $nomeImagem;
 
-    $caminhoBanco = 'img/produtos/' . $nomeImagem;
+    $caminhoBanco = 'imagens/doces/' . $nomeImagem;
 
 }
 ?>
