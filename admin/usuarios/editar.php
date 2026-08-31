@@ -61,4 +61,28 @@ try {
 
 <form method="POST">
 
+    <input
+        type="hidden"
+        name="id"
+        value="<?php echo $usuario['id']; ?>"
+    >
+
+    <input
+        type="text"
+        name="nome"
+        value="<?php echo $usuario['nome']; ?>"
+        required
+    >
+
+    <br><br>
+
+    <input
+        type="email"
+        name="email"
+        value="<?php echo $usuario['email']; ?>"
+        required
+    >
+
+    <br><br>
+
 </form>
