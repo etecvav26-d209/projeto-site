@@ -154,7 +154,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     </select>
 
     <br><br>
-    
+
+ <button type="submit">
+        Cadastrar
+    </button>
+
 </form>
+
+<?php
+
+include '../../includes/footer.php';
+
+?>
 
 
