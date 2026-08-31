@@ -99,3 +99,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome'])) {
     $produto = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 ?>
+
+
+<h2>Editar Produto</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+</form>
