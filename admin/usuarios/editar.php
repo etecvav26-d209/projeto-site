@@ -111,4 +111,11 @@ try {
 
     </select>
 
+     <br><br>
+
+    <button type="submit">
+        Salvar
+    </button>
+
+
 </form>
