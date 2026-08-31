@@ -114,8 +114,15 @@ try {
      <br><br>
 
     <button type="submit">
+        
         Salvar
+
     </button>
 
-
 </form>
+
+<?php
+
+include '../../includes/footer.php';
+
+?>
