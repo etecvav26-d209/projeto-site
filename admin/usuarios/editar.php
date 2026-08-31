@@ -8,4 +8,7 @@ if(isset($_POST['id'])) {
     $id = $_POST['id'];
 
 }
+
+$sql = "SELECT * FROM usuarios WHERE id = :id";
+
 ?>
