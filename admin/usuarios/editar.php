@@ -35,5 +35,24 @@ $nome = $_POST['nome'];
 
     WHERE id = :id";
 
+try {
+
+        $stmt->execute([
+
+            ':nome' => $nome,
+            ':email' => $email,
+            ':tipo' => $tipo,
+            ':id' => $id
+
+        ]);
+
+        echo "Usuário atualizado com sucesso!";
+
+    } catch(PDOException $erro) {
+
+        echo "Não foi possível atualizar o usuário.";
+
+    }
+
 }
 ?>
