@@ -55,4 +55,19 @@ $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             <td>
 
+            
+            <form method="POST" action="editar.php">
+
+                    <input
+                        type="hidden"
+                        name="id"
+                        value="<?php echo $usuario['id']; ?>"
+                    >
+
+                    <button type="submit">
+                        Editar
+                    </button>
+
+                </form>
+
 <?php } ?>
