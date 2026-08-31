@@ -107,6 +107,54 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <br><br>
 
+    <select name="categoria" required>
+
+        <option value="">
+            Selecione a categoria
+        </option>
+
+        <option value="Doces Franceses">
+            Doces Franceses
+        </option>
+
+        <option value="Doces Tradicionais">
+            Doces Tradicionais
+        </option>
+
+        <option value="Docinhos para Eventos">
+            Docinhos para Eventos
+        </option>
+
+        <option value="Bolos para Eventos">
+            Bolos para Eventos
+        </option>
+
+        <option value="Kits para Eventos">
+            Kits para Eventos
+        </option>
+
+        <option value="Bebidas">
+            Bebidas
+        </option>
+
+    </select>
+
+    <br><br>
+
+    <select name="disponivel" required>
+
+        <option value="1">
+            Disponível
+        </option>
+
+        <option value="0">
+            Indisponível
+        </option>
+
+    </select>
+
+    <br><br>
+    
 </form>
 
 
