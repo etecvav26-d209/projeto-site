@@ -70,4 +70,16 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <br><br>
 
-        
+         <form method="POST" action="editar.php">
+
+            <input
+                type="hidden"
+                name="id"
+                value="<?php echo $produto['id']; ?>"
+            >
+
+            <button type="submit">
+                Editar
+            </button>
+
+        </form>
