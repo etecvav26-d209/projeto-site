@@ -18,4 +18,6 @@ $stmt->execute([
     ':id' => $id
 
 ]);
+
+$usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
