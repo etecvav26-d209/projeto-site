@@ -38,3 +38,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 ?>
+
+<h2>Cadastrar Usuário</h2>
+
+<form method="POST">
+
