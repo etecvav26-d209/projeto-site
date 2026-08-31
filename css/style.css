@@ -13,6 +13,13 @@ body {
 .header {
     padding: 20px;
     background-color: #F8C8DC;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .logo img {
@@ -22,15 +29,19 @@ body {
     display: block;
 }
 
-nav {
+.nav {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     gap: 20px;
 }
 
-nav a {
+.nav a {
     text-decoration: none;
+    color: #332421;
+    font-weight: bold;
+    padding: 10px;
 }
 
 .nav a:hover {
