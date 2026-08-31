@@ -35,6 +35,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     }
 
+    catch(PDOException $erro) { 
+        
+    echo "Este e-mail já está cadastrado."; 
+    
+    }
+
 }
 
 ?>
