@@ -9,4 +9,9 @@ if (!isset($_POST['id'])) {
 
 $_POST['id']
 
+$sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
+        FROM pedidos
+        INNER JOIN usuarios
+        ON pedidos.usuario_id = usuarios.id
+        WHERE pedidos.id = :id";
 ?>
