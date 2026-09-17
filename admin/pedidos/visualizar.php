@@ -14,4 +14,8 @@ $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
         INNER JOIN usuarios
         ON pedidos.usuario_id = usuarios.id
         WHERE pedidos.id = :id";
+
+        $stmt_itens = $conexao->prepare($sql_itens);
+        $stmt_itens->execute([':pedido_id' => $id]);
+
 ?>
