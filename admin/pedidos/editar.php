@@ -12,5 +12,7 @@ $sql = "SELECT * FROM pedidos WHERE id = :id";
 $stmt = $conexao->prepare($sql); 
 
 $stmt->execute([':id' => $id]);
+
+$pedido = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
