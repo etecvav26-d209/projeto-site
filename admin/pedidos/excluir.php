@@ -42,3 +42,7 @@ if (isset($_POST['confirmar'])) {
         Não, voltar 
     </button> 
 </form>
+
+<?php 
+include '../../includes/footer.php'; 
+?>
