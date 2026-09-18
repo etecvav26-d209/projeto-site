@@ -40,5 +40,12 @@ echo "Pedido atualizado com sucesso.";
 $pedido['status'] = $status; 
 $pedido['observacoes'] = $observacoes;
 }
+
 ?>
+
+<h1>Editar Pedido #<?= $pedido['id'] ?></h1> 
+
+<form method="POST" action="editar.php"> 
+    
+<input type="hidden" name="id" value="<?= $pedido['id'] ?>" >
 
