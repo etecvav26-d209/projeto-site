@@ -27,3 +27,11 @@ if (isset($_POST['confirmar'])) {
     <p> 
         Tem certeza que deseja excluir o pedido #<?= $id ?>? 
     </p>
+
+<form method="POST" action="excluir.php"> 
+    <input type="hidden" name="id" value="<?= $id ?>" > 
+    <input type="hidden" name="confirmar" value="1" > 
+        <button type="submit"> 
+            Sim, excluir 
+        </button>
+</form>
