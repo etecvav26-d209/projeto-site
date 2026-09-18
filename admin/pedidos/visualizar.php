@@ -20,3 +20,33 @@ $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
         $stmt_itens->execute([':pedido_id' => $id]);
 
 ?>
+
+<h1>Pedido #<?= $pedido['id'] ?></h1> 
+
+<h2>Informações do pedido</h2> 
+
+    <p> 
+        <strong>Cliente:</strong> <?= $pedido['nome'] ?> 
+    </p> 
+    
+    <p> 
+        <strong>E-mail:</strong> <?= $pedido['email'] ?> 
+    </p> 
+    
+    <p> 
+        <strong>Data:</strong> <?= $pedido['data'] ?> 
+    </p> 
+    
+    <p> 
+        <strong>Status:</strong> <?= $pedido['status'] ?> 
+    </p> 
+    
+    <p> 
+        <strong>Observações:</strong> <?= $pedido['observacoes'] ?> 
+    </p> 
+    
+    <p> 
+        <strong>Total:</strong> R$ <?= number_format($pedido['total'], 2, ',', '.') ?> 
+    </p>
+
+    
