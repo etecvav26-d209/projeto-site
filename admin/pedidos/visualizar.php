@@ -49,4 +49,37 @@ $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
         <strong>Total:</strong> R$ <?= number_format($pedido['total'], 2, ',', '.') ?> 
     </p>
 
+<h2>Produtos do pedido</h2> 
+
+<?php if (count($itens) > 0): ?> 
     
+    <?php foreach ($itens as $item): ?> 
+        
+        <?php $subtotal = $item['quantidade'] * $item['preco']; ?> 
+        
+        <div> 
+            <p> 
+                <strong>Produto:</strong> <?= $item['nome'] ?> 
+            </p> 
+            
+            <p> 
+                <strong>Quantidade:</strong> <?= $item['quantidade'] ?> 
+            </p> 
+            
+            <p> 
+                <strong>Preço:</strong> R$ <?= number_format($item['preco'], 2, ',', '.') ?> 
+            </p> 
+            
+            <p> 
+                <strong>Subtotal:</strong> R$ <?= number_format($subtotal, 2, ',', '.') ?> 
+            </p> 
+            
+        </div>
+        
+        <?php endforeach; ?> 
+        
+            <?php else: ?> 
+                <p>Este pedido não possui produtos.</p> 
+            <?php endif; ?>
+
+
