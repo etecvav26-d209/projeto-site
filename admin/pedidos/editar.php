@@ -98,3 +98,5 @@ $pedido['observacoes'] = $observacoes;
 
 </form>
 
+<?php include '../../includes/footer.php'; ?>
+
