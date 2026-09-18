@@ -5,5 +5,7 @@ if (!isset($_POST['id'])) {
     exit;
 }
 
+$id = $_POST['id'];
+
 ?>
 
