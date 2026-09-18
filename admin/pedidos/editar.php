@@ -18,5 +18,8 @@ $pedido = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$pedido) { echo "Pedido não encontrado."; 
 exit; 
 }
+
+if (isset($_POST['salvar'])) {
+}
 ?>
 
