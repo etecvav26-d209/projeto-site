@@ -88,3 +88,13 @@ $pedido['observacoes'] = $observacoes;
 
 </form>
 
+<form method="POST" action="visualizar.php"> 
+    
+<input type="hidden" name="id" value="<?= $pedido['id'] ?>" >
+
+<button type="submit"> 
+    Voltar para o pedido
+ </button>
+
+</form>
+
