@@ -14,5 +14,9 @@ $stmt = $conexao->prepare($sql);
 $stmt->execute([':id' => $id]);
 
 $pedido = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if (!$pedido) { echo "Pedido não encontrado."; 
+exit; 
+}
 ?>
 
