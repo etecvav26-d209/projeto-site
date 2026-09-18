@@ -35,3 +35,10 @@ if (isset($_POST['confirmar'])) {
             Sim, excluir 
         </button>
 </form>
+
+<form method="POST" action="visualizar.php"> 
+    <input type="hidden" name="id" value="<?= $id ?>" >
+     <button type="submit"> 
+        Não, voltar 
+    </button> 
+</form>
