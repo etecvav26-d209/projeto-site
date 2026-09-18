@@ -82,4 +82,10 @@ $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
                 <p>Este pedido não possui produtos.</p> 
             <?php endif; ?>
 
+<a href="index.php">Voltar</a>
 
+<?php
+
+include '../../includes/footer.php';
+
+?>
