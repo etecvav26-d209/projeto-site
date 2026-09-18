@@ -1,4 +1,5 @@
 <?php require_once '../../config/conexao.php';
+include '../../includes/header.php';
 
 if (!isset($_POST['id'])) {
     echo "ID do pedido não informado.";
@@ -20,6 +21,24 @@ exit;
 }
 
 if (isset($_POST['salvar'])) {
+
+$status = $_POST['status']; 
+$observacoes = $_POST['observacoes'];
+
+$sql = "UPDATE pedidos SET status = :status, 
+observacoes = :observacoes 
+WHERE id = :id"; 
+
+$stmt = $conexao->prepare($sql); 
+$stmt->execute([ 
+    ':status' => $status, 
+    ':observacoes' => $observacoes, 
+    ':id' => $id 
+    ]); 
+echo "Pedido atualizado com sucesso."; 
+
+$pedido['status'] = $status; 
+$pedido['observacoes'] = $observacoes;
 }
 ?>
 
