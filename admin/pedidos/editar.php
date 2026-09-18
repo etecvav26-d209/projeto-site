@@ -49,3 +49,7 @@ $pedido['observacoes'] = $observacoes;
     
 <input type="hidden" name="id" value="<?= $pedido['id'] ?>" >
 
+<label>Status:</label> 
+
+<select name="status">
+
