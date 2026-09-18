@@ -21,3 +21,9 @@ if (isset($_POST['confirmar'])) {
     exit; 
 }
 ?>
+
+<h1>Excluir Pedido</h1> 
+
+    <p> 
+        Tem certeza que deseja excluir o pedido #<?= $id ?>? 
+    </p>
