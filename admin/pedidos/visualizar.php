@@ -84,6 +84,15 @@ $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
 
 <a href="../index.php">Voltar</a>
 
+<form method="POST" action="editar.php">
+
+    <input type="hidden" name="id" value="<?= $pedido['id'] ?>" >
+        <button type="submit">
+            Editar pedido
+        </button>
+</form>
+
+
 <?php
 
 include '../../includes/footer.php';
