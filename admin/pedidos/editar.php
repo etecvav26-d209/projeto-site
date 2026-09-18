@@ -80,5 +80,11 @@ $pedido['observacoes'] = $observacoes;
 
 <br><br>
 
+<input type="hidden" name="salvar" value="1"> 
+
+<button type="submit"> 
+    Salvar alterações 
+</button>
+
 </form>
 
