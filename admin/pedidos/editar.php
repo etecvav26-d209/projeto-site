@@ -7,5 +7,10 @@ if (!isset($_POST['id'])) {
 
 $id = $_POST['id'];
 
+$sql = "SELECT * FROM pedidos WHERE id = :id"; 
+
+$stmt = $conexao->prepare($sql); 
+
+$stmt->execute([':id' => $id]);
 ?>
 
