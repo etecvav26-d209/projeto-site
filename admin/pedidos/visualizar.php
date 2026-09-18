@@ -92,6 +92,15 @@ $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
         </button>
 </form>
 
+<form method="POST" action="excluir.php">
+
+    <input type="hidden" name="id" value="<?= $pedido['id'] ?>">
+        <button type="submit">
+            Excluir pedido
+        </button>
+</form>
+
+
 
 <?php
 
