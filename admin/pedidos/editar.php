@@ -53,3 +53,20 @@ $pedido['observacoes'] = $observacoes;
 
 <select name="status">
 
+    <option value="pendente" <?= $pedido['status'] == 'pendente' ? 'selected' : '' ?>> 
+        Pendente 
+    </option> 
+    
+    <option value="em preparo" <?= $pedido['status'] == 'em preparo' ? 'selected' : '' ?>> 
+        Em preparo 
+    </option> 
+    
+    <option value="pronto" <?= $pedido['status'] == 'pronto' ? 'selected' : '' ?>> 
+            Pronto 
+    </option> 
+    
+    <option value="entregue" <?= $pedido['status'] == 'entregue' ? 'selected' : '' ?>> 
+        Entregue 
+    </option> 
+</select>
+
