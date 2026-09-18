@@ -70,3 +70,15 @@ $pedido['observacoes'] = $observacoes;
     </option> 
 </select>
 
+<br><br> 
+
+<label>Observações:</label> 
+
+<textarea name="observacoes">
+    <?= $pedido['observacoes'] ?>
+</textarea> 
+
+<br><br>
+
+</form>
+
