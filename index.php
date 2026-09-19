@@ -241,3 +241,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     ?>
 </section>
+
+<?php
+include 'includes/footer.php';
+?>
