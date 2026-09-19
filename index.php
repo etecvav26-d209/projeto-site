@@ -204,4 +204,40 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "<p>Nenhum produto disponível nesta categoria.</p>";
     }
     ?>
+
+    <!-- BEBIDAS -->
+    <h3>Bebidas</h3>
+
+    <?php
+
+    $temproduto = false;
+
+    foreach ($produtos as $produto) {
+        if ($produto['categoria'] == 'Bebidas') {
+            $temproduto = true;
+    ?>
+
+            <div class="produto">
+                <h4>
+                    <?php echo $produto['nome']; ?>
+                </h4>
+
+                <p>
+                    <?php echo $produto['descricao']; ?>
+                </p>
+
+                <p>
+                    R$
+                    <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
+                </p>
+            </div>
+
+    <?php
+        }
+    }
+
+    if ($temproduto == false) {
+        echo "<p>Nenhum produto disponível nesta categoria.</p>";
+    }
+    ?>
 </section>
