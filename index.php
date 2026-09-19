@@ -21,6 +21,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <h2>Nosso Cardápio</h2>
 
+    <form method="POST" action="encomendas.php">
     <!-- DOCES FRANCESES -->
     <h3>Doces Franceses</h3>
 
@@ -35,6 +36,10 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
             <div class="produto">
+                <label>
+                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
+                        Selecionar
+                </label>
                 <h4>
                     <?php echo $produto['nome']; ?>
                 </h4>
@@ -70,6 +75,11 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
             <div class="produto">
+                <label>
+                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
+                        Selecionar
+                </label>
+
                 <h4>
                     <?php echo $produto['nome']; ?>
                 </h4>
@@ -106,6 +116,12 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
             <div class="produto">
+
+                <label>
+                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
+                        Selecionar
+                </label>
+
                 <h4>
                     <?php echo $produto['nome']; ?>
                 </h4>
@@ -144,6 +160,11 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
             <div class="produto">
+                <label>
+                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
+                        Selecionar
+                </label>
+
                 <h4>
                     <?php echo $produto['nome']; ?>
                 </h4>
@@ -181,6 +202,11 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
             <div class="produto">
+                <label>
+                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
+                        Selecionar
+                </label>
+
                 <h4>
                     <?php echo $produto['nome']; ?>
                 </h4>
@@ -218,6 +244,11 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     ?>
 
             <div class="produto">
+                <label>
+                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
+                        Selecionar
+                </label>
+
                 <h4>
                     <?php echo $produto['nome']; ?>
                 </h4>
@@ -240,6 +271,11 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "<p>Nenhum produto disponível nesta categoria.</p>";
     }
     ?>
+
+        <button type="submit">
+            Adicionar ao carrinho
+        </button>
+    </form>
 </section>
 
 <?php
