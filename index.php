@@ -10,3 +10,9 @@ $stmt->execute();
 $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
+
+<h1>Bem-vindo ao Noir & Sugar</h1>
+
+<p>
+    Cada mordida é uma experiência.
+</p>
