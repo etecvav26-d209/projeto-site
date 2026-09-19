@@ -94,13 +94,12 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }
     if ($temproduto == false) {
-
         echo "<p>Nenhum produto disponível nesta categoria.</p>";
     }
     ?>
 
- <!-- DOCINHOS PARA EVENTOS -->
-    <h3>Docinhos para Eventos</h3>
+ <!-- DOCES PARA EVENTOS -->
+    <h3>Doces para Eventos</h3>
 
     <?php
 
@@ -138,4 +137,45 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "<p>Nenhum produto disponível nesta categoria.</p>";
     }
     ?>
+
+    <!-- BOLOS PARA EVENTOS -->
+    <h3>Bolos para Eventos</h3>
+
+    <?php
+
+    $temproduto = false;
+
+    foreach ($produtos as $produto) {
+
+        if ($produto['categoria'] == 'Bolos para Eventos') {
+
+            $temproduto = true;
+
+    ?>
+
+            <div class="produto">
+                <h4>
+                    <?php echo $produto['nome']; ?>
+                </h4>
+
+                <p>
+                    <?php echo $produto['descricao']; ?>
+                </p>
+
+                <p>
+                    R$
+                    <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
+                </p>
+            </div>
+
+    <?php
+
+        }
+    }
+
+    if ($temproduto == false) {
+        echo "<p>Nenhum produto disponível nesta categoria.</p>";
+    }
+    ?>
+
 </section>
