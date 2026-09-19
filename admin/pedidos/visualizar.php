@@ -8,7 +8,7 @@ if (!isset($_POST['id'])) {
     exit;
 }
 
-$_POST['id']
+$_POST['id'];
 
 $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
         FROM pedidos
