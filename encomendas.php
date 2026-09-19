@@ -1,8 +1,8 @@
 <?php
 
 require_once 'config/conexao.php';
-
 include 'includes/header.php';
+$produtosSelecionados = $_POST['produtos'] ?? array();
 
 ?>
 
