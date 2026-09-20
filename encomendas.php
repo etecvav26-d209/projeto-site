@@ -3,16 +3,17 @@
 require_once 'config/conexao.php';
 include 'includes/header.php';
 $produtosSelecionados = $_POST['produtos'] ?? array();
+$quantidades = $_POST['quantidade'] ?? array();
 
 if(empty($produtosSelecionados)) {
     echo "<p>Nenhum produto foi selecionado.</p>";
 } else {
+     $total = 0;
 ?>
 
     <form method="POST" action="encomendas.php">
 
         <?php
-        $total = 0;
 
         foreach($produtosSelecionados as $id) {
 
@@ -25,6 +26,11 @@ if(empty($produtosSelecionados)) {
             $produto = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if($produto) {
+
+                $quantidade = $quantidades[$id] ?? 1;
+                $subtotal = $produto['preco'] * $quantidade;
+                $total = $total + $subtotal;
+
         ?>
 
                 <div class="produto">
@@ -46,7 +52,7 @@ if(empty($produtosSelecionados)) {
                         Quantidade:
                     </label>
 
-                    <input ype="number" name="quantidade[<?php echo $produto['id']; ?>]" value="1" min="1" >
+                    <input type="number" name="quantidade[<?php echo $produto['id']; ?>]" value="1" min="1" >
                 </div>
                 <hr>
 
@@ -55,6 +61,19 @@ if(empty($produtosSelecionados)) {
         }
         ?>
 
+        <h2>
+            Total:
+            R$
+            <?php echo number_format($total, 2, ',', '.'); ?>
+        </h2>
+
+        <?php
+        foreach($produtosSelecionados as $id) {
+        ?>
+            <input type="hidden" name="produtos[]" value="<?php echo $id; ?>">
+        <?php
+        }
+        ?>
 
         <button type="submit">
             Atualizar carrinho
