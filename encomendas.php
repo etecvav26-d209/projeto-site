@@ -82,5 +82,103 @@ if(empty($produtosSelecionados)) {
 
 <?php
 }
+?>
+
+ <br>
+
+    <form method="POST" action="encomendas.php">
+        <?php
+
+        foreach($produtosSelecionados as $id) {
+
+            $quantidade = $quantidades[$id] ?? 1;
+        ?>
+
+            <input type="hidden" name="produtos[]" value="<?php echo $id; ?>">
+
+            <input type="hidden" name="quantidade[<?php echo $id; ?>]" value="<?php echo $quantidade; ?>>
+
+        <?php
+        }
+        ?>
+
+        <input type="hidden" name="finalizar" value="1">
+
+        <button type="submit">
+            Finalizar pedido
+        </button>
+
+    </form>
+
+
+<?php
+if(isset($_POST['finalizar'])) {
+
+    if(!isset($_SESSION['usuario_id'])) {
+
+        echo "<p>Você precisa estar logado para finalizar o pedido.</p>";
+
+    } else {
+
+        $usuarioId = $_SESSION['usuario_id'];
+
+        try {
+            $conexao->beginTransaction();
+            $sql = "INSERT INTO pedidos
+                    (usuario_id, total, observa, status)
+                    VALUES
+                    (:usuario_id, :total, :observa, 'carrinho')";
+            $stmt = $conexao->prepare($sql);
+            $stmt->execute([
+                ':usuario_id' => $usuarioId,
+                ':total' => $total,
+                ':observa' => null
+            ]);
+            $pedidoId = $conexao->lastInsertId();
+
+
+            foreach($produtosSelecionados as $id) {
+
+                $quantidade = $quantidades[$id] ?? 1;
+                $sql = "SELECT preco
+                        FROM produtos
+                        WHERE id = :id";
+                $stmt = $conexao->prepare($sql);
+                $stmt->execute([
+                    ':id' => $id
+                ]);
+                $produto = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                if($produto) {
+
+                    $sql = "INSERT INTO itens
+                            (pedido_id, produto_id, quantidade, preco)
+                            VALUES
+                            (:pedido_id, :produto_id, :quantidade, :preco)";
+                    $stmt = $conexao->prepare($sql);
+                    $stmt->execute([
+                        ':pedido_id' => $pedidoId,
+                        ':produto_id' => $id,
+                        ':quantidade' => $quantidade,
+                        ':preco' => $produto['preco']
+                    ]);
+                }
+            }
+
+            $conexao->commit();
+
+            echo "<p>Pedido adicionado ao carrinho com sucesso!</p>";
+
+            echo "<p>Número do pedido: " . $pedidoId . "</p>";
+
+        } catch(PDOException $erro) {
+
+            $conexao->rollBack();
+
+            echo "<p>Não foi possível salvar o pedido.</p>";
+        }
+    }
+}
+
 include 'includes/footer.php';
 ?>
