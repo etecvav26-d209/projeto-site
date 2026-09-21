@@ -75,3 +75,180 @@ textarea {
 .nav a:hover {
     color: #a45c74;
 }
+
+/* Estrutura principal */
+
+main {
+    min-height: 70vh;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.secao-cabecalho {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.mini-titulo,
+.hero-tag {
+    display: inline-block;
+    color: #885166;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.secao-cabecalho h2,
+.about h1,
+.store h1,
+.help h1,
+.carrinho h1,
+.admin-painel h1,
+.container > h1 {
+    margin: 8px 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.secao-cabecalho p {
+    margin: 0;
+    color: #684f49;
+}
+
+/* Banner inicial */
+
+.hero {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 490px;
+    overflow: hidden;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(51, 36, 33, 0.58),
+        rgba(51, 36, 33, 0.35)
+    );
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 1;
+    width: min(620px, 88%);
+    padding: 35px 0;
+}
+
+.hero-tag {
+    padding: 7px 12px;
+    color: var(--white);
+    background-color: rgba(248, 200, 220, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 30px;
+}
+
+.hero h1 {
+    margin: 15px 0 8px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.hero-botao,
+.botao-carrinho,
+button {
+    display: inline-block;
+    padding: 11px 18px;
+    color: var(--white);
+    background-color: var(--chocolate);
+    border: 1px solid var(--chocolate);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.hero-botao {
+    background-color: var(--pink);
+    border-color: var(--pink);
+    color: var(--chocolate);
+}
+
+.hero-botao:hover,
+.botao-carrinho:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* Menu em sanfona */
+
+.sanfona {
+    width: min(1120px, 92%);
+    margin: 18px auto 0;
+}
+
+.sanfona-toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+.btn-sanfonado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 11px 14px;
+    background-color: var(--pink);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.sanfona-content {
+    display: none;
+    padding: 10px 14px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-top: 0;
+}
+
+.sanfona-toggle:checked ~ .sanfona-content {
+    display: block;
+}
+
+.sanfona-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sanfona-list li + li {
+    border-top: 1px solid var(--border);
+}
+
+.sanfona-list a {
+    display: block;
+    padding: 9px 0;
+}
