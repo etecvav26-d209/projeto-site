@@ -42,7 +42,7 @@ $status = $_POST['status'];
 $observacoes = $_POST['observacoes'];
 
 $sql = "UPDATE pedidos SET status = :status, 
-observacoes = :observacoes 
+observa = :observacoes 
 WHERE id = :id"; 
 
 $stmt = $conexao->prepare($sql); 
@@ -54,7 +54,7 @@ $stmt->execute([
 echo "Pedido atualizado com sucesso."; 
 
 $pedido['status'] = $status; 
-$pedido['observacoes'] = $observacoes;
+$pedido['observa'] = $observacoes;
 }
 
 ?>
@@ -91,7 +91,7 @@ $pedido['observacoes'] = $observacoes;
 <label>Observações:</label> 
 
 <textarea name="observacoes">
-    <?= $pedido['observacoes'] ?>
+    <?= $pedido['observa'] ?>
 </textarea> 
 
 <br><br>
