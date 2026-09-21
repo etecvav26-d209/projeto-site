@@ -11,6 +11,18 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
+<div class="sanfona">
+    <input type="checkbox" id="sanfona-toggle" class="sanfona-toggle" aria-hidden="true">
+    <label for="sanfona-toggle" class="btn-sanfonado" aria-controls="sanfona-menu">Abrir Menu</label>
+    <div id="sanfona-menu" class="sanfona-content" aria-hidden="true">
+        <ul class="sanfona-list">
+            <li><a href="menu/ajuda.php">Ajuda</a></li>
+            <li><a href="menu/loja.php">Loja</a></li>
+            <li><a href="menu/sobre.php">Sobre</a></li>
+        </ul>
+    </div>
+</div>
+
 <h1>Bem-vindo ao Noir & Sugar</h1>
 
 <p>
