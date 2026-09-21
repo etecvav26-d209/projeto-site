@@ -137,7 +137,7 @@ try {
 
 <br>
 
-<a href="../index.php">
+<a href="index.php">
 
     <button type="button">
         Voltar ao painel

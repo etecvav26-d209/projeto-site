@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
 
         echo "Usuário excluído com sucesso!";
 
-         header("Refresh: 2; URL=../index.php");
+         header("Refresh: 2; URL=index.php");
 
     } catch(PDOException $erro) {
 
