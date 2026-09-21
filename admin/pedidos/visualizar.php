@@ -1,5 +1,18 @@
 <?php
+session_start();
 
+
+if(!isset($_SESSION['usuario_id']) || $_SESSION['tipo'] != 'admin') {
+
+    echo "<h1>Acesso restrito</h1>";
+
+    echo "<p>Você precisa estar logado como administrador para acessar esta página.</p>";
+
+    echo "<a href='../login.php'>Fazer login</a>";
+
+    exit;
+
+}
 require_once '../../config/conexao.php';
 include '../../includes/header.php';
 
