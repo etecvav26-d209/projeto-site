@@ -128,38 +128,38 @@ section {
 
 .galeria {
     padding: 40px 20px;
-
     text-align: center;
-
     background-color: #F5F5DC;
 }
 
 .galeria h2 {
     color: #332421;
-
     font-size: 28px;
-
     margin-bottom: 25px;
 }
 
 .galeria-imagens {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
 
     gap: 15px;
 
-    max-width: 900px;
+    overflow-x: auto;
 
-    margin: 0 auto;
+    scroll-snap-type: x mandatory;
+
+    padding: 10px 5px 20px;
+
+    max-width: 100%;
 }
 
 .galeria-imagens img {
-    width: 100%;
+    min-width: 80%;
 
-    height: 180px;
+    height: 220px;
 
     object-fit: cover;
 
-    border-radius: 10px;
+    border-radius: 12px;
+
+    scroll-snap-align: center;
 }
