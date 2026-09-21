@@ -39,6 +39,24 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 </section>
 
+<section id="galeria" class="galeria">
+
+    <h2>Nosso Trabalho</h2>
+
+    <div class="galeria-imagens">
+
+        <img src="imagens/doces/galeria1" alt="Nosso trabalho">
+        <img src="imagens/doces/galeria2" alt="Nosso trabalho">
+        <img src="imagens/doces/galeria3" alt="Nosso trabalho">
+        <img src="imagens/doces/galeria4" alt="Nosso trabalho">
+        <img src="imagens/doces/galeria5" alt="Nosso trabalho">
+        <img src="imagens/doces/galeria6" alt="Nosso trabalho">
+        <img src="imagens/doces/galeria7" alt="Nosso trabalho">
+
+    </div>
+
+</section>
+
 <section id="cardapio">
 
     <h2>Nosso Cardápio</h2>
