@@ -502,3 +502,64 @@ td button {
     padding: 7px 10px;
     font-size: 0.8rem;
 }
+
+/* Administração */
+
+.admin-painel {
+    width: min(850px, 92%);
+    margin: 40px auto;
+    text-align: center;
+}
+
+.admin-menu {
+    display: grid;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.admin-menu a {
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    font-weight: 600;
+}
+
+.admin-menu a:hover {
+    background-color: var(--pink);
+}
+
+/* Páginas institucionais */
+
+.about,
+.store,
+.help {
+    width: min(1000px, 92%);
+    margin: 40px auto;
+}
+
+.about-grid,
+.team-grid {
+    display: grid;
+    gap: 16px;
+    margin: 22px 0;
+}
+
+.about-grid article,
+.team-member,
+.store-info,
+.help section {
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(51, 36, 33, 0.07);
+}
+
+.about h2,
+.help h2,
+.store h2 {
+    margin-top: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
