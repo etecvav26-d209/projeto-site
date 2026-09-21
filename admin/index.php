@@ -34,7 +34,7 @@ require_once "../includes/header.php";
             Produtos
         </a>
 
-        <a href="pedidos/visualizar.php">
+        <a href="pedidos/index.php">
             Pedidos
         </a>
 
