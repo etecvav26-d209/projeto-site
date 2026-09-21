@@ -78,3 +78,7 @@ if(isset($_POST['cadastrar'])) {
     </a>
 </p>
 
+<?php
+include '../includes/footer.php';
+?>
+
