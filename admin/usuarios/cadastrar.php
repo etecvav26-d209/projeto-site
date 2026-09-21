@@ -10,6 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+    $senha = password_hash($senha, PASSWORD_DEFAULT);
     $tipo = $_POST['tipo'];
 
      $sql = "INSERT INTO usuarios
