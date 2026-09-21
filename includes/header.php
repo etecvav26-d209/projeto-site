@@ -16,14 +16,17 @@
 <header class="header">
 
 <div class="logo">   
-    <a href="/Noir-and-sugar/index.php"><img src="/Noir-and-sugar/logo/logo-sem-fundo.png" alt="Logo Noir & Sugar"></a>
+    <a href="/projeto-site/index.php">
+    <img src="/projeto-site/logo/logo-sem-fundo.png" alt="Logo Noir & Sugar">
+</a>
+
 </div>
 
  <nav class="nav">
-        <a href="/Noir-and-sugar/index.php#inicio">Início</a>
-        <a href="/Noir-and-sugar/index.php#galeria">Galeria</a>
-        <a href="/Noir-and-sugar/index.php#cardapio">Cardápio</a>
-        <a href="/Noir-and-sugar/encomendas.php">Carrinho</a>
+       <a href="/projeto-site/index.php#inicio">Início</a>
+        <a href="/projeto-site/index.php#galeria">Galeria</a>
+        <a href="/projeto-site/index.php#cardapio">Cardápio</a>
+        <a href="/projeto-site/encomendas.php">Carrinho</a>
     </nav>
 
 </header>

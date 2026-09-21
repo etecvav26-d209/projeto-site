@@ -40,7 +40,7 @@ if(isset($_POST['cadastrar'])) {
     Preencha os dados abaixo para criar sua conta.
 </p>
 
-<form method="POST" action="cadastro.php">
+<form method="POST" action="criarconta.php">
 
     <label>
         Nome:
