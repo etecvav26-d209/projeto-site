@@ -252,3 +252,40 @@ button:hover {
     display: block;
     padding: 9px 0;
 }
+
+/* Galeria */
+
+.galeria,
+.cardapio {
+    padding: 58px 0;
+}
+
+.galeria {
+    background-color: var(--white);
+}
+
+.galeria-imagens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.galeria-imagens figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.galeria-imagens img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeria-imagens figure:hover img {
+    transform: scale(1.05);
+}
