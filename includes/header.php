@@ -8,7 +8,7 @@
     <title>Noir & Sugar</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Noir-and-sugar/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
