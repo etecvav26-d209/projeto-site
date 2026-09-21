@@ -1,0 +1,126 @@
+<?php
+
+session_start();
+
+
+if(!isset($_SESSION['usuario_id']) || $_SESSION['tipo'] != 'admin') {
+
+    echo "<h1>Acesso restrito</h1>";
+
+    echo "<p>Você precisa estar logado como administrador para acessar esta página.</p>";
+
+    echo "<a href='../login.php'>Fazer login</a>";
+
+    exit;
+
+}
+require_once '../../config/conexao.php';
+
+include '../../includes/header.php';
+
+$sql = "SELECT * FROM produtos";
+
+$stmt = $conexao->prepare($sql);
+
+$stmt->execute();
+
+$produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+<h2>Produtos</h2>
+
+<a href="cadastrar.php">
+    Cadastrar Produto
+</a>
+
+<br><br>
+
+
+<?php foreach($produtos as $produto) { ?>
+
+    <div>
+
+        <h3>
+            <?php echo $produto['nome']; ?>
+        </h3>
+
+        <p>
+            <?php echo $produto['descricao']; ?>
+        </p>
+
+        <p>
+            Preço: R$
+            <?php echo $produto['preco']; ?>
+        </p>
+
+        <p>
+            Categoria:
+            <?php echo $produto['categoria']; ?>
+        </p>
+
+        <p>
+            Disponibilidade:
+
+            <?php
+
+            if($produto['disponivel'] == 1) {
+
+                echo "Disponível";
+
+            } else {
+
+                echo "Indisponível";
+
+            }
+
+            ?>
+
+        </p>
+
+        <img
+            src="../../<?php echo $produto['imagem']; ?>"
+            width="150"
+        >
+
+        <br><br>
+
+         <form method="POST" action="editar.php">
+
+            <input
+                type="hidden"
+                name="id"
+                value="<?php echo $produto['id']; ?>"
+            >
+
+            <button type="submit">
+                Editar
+            </button>
+
+        </form>
+
+        <form method="POST" action="excluir.php">
+
+            <input
+                type="hidden"
+                name="id"
+                value="<?php echo $produto['id']; ?>"
+            >
+
+            <button type="submit">
+                Excluir
+            </button>
+
+        </form>
+
+        <hr>
+
+    </div>
+
+<?php } ?>
+
+
+<?php
+
+include '../../includes/footer.php';
+
+?>
