@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Noir & Sugar</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/projeto-site/css/style.css">
 </head>
 
 <body>
@@ -16,7 +14,10 @@
 <header class="header">
 
 <div class="logo">   
-    <a href="index.php"><img src="logo/logo-sem-fundo.png" alt="Logo Noir & Sugar"></a>
+    <a href="/projeto-site/index.php">
+    <img src="/projeto-site/logo/logo-sem-fundo.png" alt="Logo Noir & Sugar">
+</a>
+
 </div>
 
  <nav class="nav">
