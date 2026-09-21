@@ -563,3 +563,17 @@ td button {
     margin-top: 0;
     font-family: Georgia, "Times New Roman", serif;
 }
+
+/* Footer */
+
+.footer {
+    padding: 25px 5%;
+    color: var(--white);
+    background-color: var(--chocolate);
+    text-align: center;
+}
+
+.footer p {
+    margin: 4px 0;
+    font-size: 0.85rem;
+}
