@@ -289,3 +289,216 @@ button:hover {
 .galeria-imagens figure:hover img {
     transform: scale(1.05);
 }
+
+/* Cardápio e produtos */
+
+.cardapio {
+    background-color: var(--cream);
+}
+
+.categoria-card {
+    width: min(1120px, 92%);
+    margin: 0 auto 38px;
+}
+
+.categoria-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.categoria-titulo span {
+    flex: 1;
+    height: 1px;
+    background-color: var(--border);
+}
+
+.categoria-titulo h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+.produtos-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.produto {
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(51, 36, 33, 0.07);
+}
+
+.produto-imagem img,
+.produto-sem-imagem {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.produto-sem-imagem {
+    display: grid;
+    place-items: center;
+    background-color: var(--pink);
+    font-size: 2rem;
+}
+
+.produto-info {
+    padding: 16px;
+}
+
+.produto-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.produto h4 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.produto-descricao {
+    margin: 10px 0;
+    color: #684f49;
+    font-size: 0.9rem;
+}
+
+.produto-preco {
+    color: #885166;
+}
+
+.produto-selecao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    font-size: 0.78rem;
+}
+
+.pedido-acao {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+    padding: 22px;
+    text-align: center;
+    background-color: var(--pink);
+    border-radius: 8px;
+}
+
+.pedido-acao p {
+    margin-top: 0;
+}
+
+/* Carrinho */
+
+.carrinho {
+    width: min(800px, 92%);
+    margin: 40px auto;
+}
+
+.carrinho > .produto,
+.carrinho form .produto {
+    margin-bottom: 15px;
+    padding: 18px;
+}
+
+.carrinho .produto h2 {
+    margin-top: 0;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.carrinho hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+/* Formulários, mensagens e tabelas */
+
+form {
+    max-width: 620px;
+}
+
+.container > form,
+.carrinho form {
+    margin: 22px 0;
+    padding: 22px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+input:not([type="hidden"]),
+select,
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    color: var(--chocolate);
+    background-color: #fff;
+    border: 1px solid #d9b7c4;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--pink);
+    border-color: #a45c74;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--chocolate);
+}
+
+input[type="number"] {
+    max-width: 110px;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    background-color: var(--white);
+    border-collapse: collapse;
+    box-shadow: var(--shadow);
+}
+
+th,
+td {
+    padding: 11px;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background-color: var(--pink);
+}
+
+td form {
+    margin-bottom: 8px;
+}
+
+td button {
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 0.8rem;
+}
