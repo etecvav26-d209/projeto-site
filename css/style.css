@@ -39,3 +39,39 @@ select,
 textarea {
     font: inherit;
 }
+
+/* Cabeçalho e navegação */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 5%;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 10px rgba(51, 36, 33, 0.06);
+}
+
+.logo img {
+    width: 105px;
+    height: auto;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px 14px;
+}
+
+.nav a {
+    padding: 6px 0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #a45c74;
+}
