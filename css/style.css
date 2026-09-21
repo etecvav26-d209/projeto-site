@@ -577,3 +577,95 @@ td button {
     margin: 4px 0;
     font-size: 0.85rem;
 }
+
+/* Ajustes de leitura para páginas de login, cadastro e administração */
+.container > h1,
+.container > h2,
+.container > p,
+.container > a,
+.container > table {
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+.container > h1,
+.container > h2 {
+    margin-top: 38px;
+}
+
+.container > p {
+    max-width: 650px;
+}
+
+.container > a:not(.nav a),
+.carrinho > a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #885166;
+    font-weight: 700;
+}
+
+/* Telas maiores: a base acima é pensada para celular */
+@media (min-width: 700px) {
+    .header {
+        padding-right: 8%;
+        padding-left: 8%;
+    }
+
+    .logo img {
+        width: 125px;
+    }
+
+    .nav {
+        gap: 24px;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 3.6rem;
+    }
+
+    .galeria-imagens {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .galeria-imagens img {
+        height: 220px;
+    }
+
+    .galeria-imagens figure:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .galeria-imagens figure:first-child img {
+        height: 452px;
+    }
+
+    .produtos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid,
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 980px) {
+    .produtos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
