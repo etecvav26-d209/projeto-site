@@ -31,6 +31,7 @@ $categorias = [
             <li><a href="menu/ajuda.php">Ajuda</a></li>
             <li><a href="menu/loja.php">Loja</a></li>
             <li><a href="menu/sobre.php">Sobre</a></li>
+            <li><a href="menu/login.php">Login</a></li>
         </ul>
     </div>
 </div>
