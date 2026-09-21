@@ -57,3 +57,7 @@ if(isset($_POST['login'])) {
         Entrar
     </button>
 </form>
+
+<?php
+include '../includes/footer.php';
+?>
