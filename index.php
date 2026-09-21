@@ -25,7 +25,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <section id="inicio" class="banner-inicial">
 
-    <img src="img/banners/imagem-inicial.jpg" alt="Imagem inicial">
+    <img src="imagens\fundo.jpeg" alt="Imagem inicial">
 
     <div class="banner-conteudo">
 
@@ -45,13 +45,13 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="galeria-imagens">
 
-        <img src="imagens/doces/galeria1" alt="Nosso trabalho">
-        <img src="imagens/doces/galeria2" alt="Nosso trabalho">
-        <img src="imagens/doces/galeria3" alt="Nosso trabalho">
-        <img src="imagens/doces/galeria4" alt="Nosso trabalho">
-        <img src="imagens/doces/galeria5" alt="Nosso trabalho">
-        <img src="imagens/doces/galeria6" alt="Nosso trabalho">
-        <img src="imagens/doces/galeria7" alt="Nosso trabalho">
+        <img src="imagens\doces\galeria1.jpeg" alt="Nosso trabalho">
+        <img src="imagens\doces\galeria2.jpeg" alt="Nosso trabalho">
+        <img src="imagens\doces\galeria3.jpeg" alt="Nosso trabalho">
+        <img src="imagens\doces\galeria4.jpeg" alt="Nosso trabalho">
+        <img src="imagens\doces\galeria5.jpeg" alt="Nosso trabalho">
+        <img src="imagens\doces\galeria6.jpeg" alt="Nosso trabalho">
+        <img src="imagens\doces\galeria7.jpeg" alt="Nosso trabalho">
 
     </div>
 
