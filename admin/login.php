@@ -6,7 +6,7 @@ include "../includes/header.php";
 if(isset($_POST['login'])) {
 
     $email = $_POST['email'];
-    $senha = $_POST['senha']
+    $senha = $_POST['senha'];
     $sql = "SELECT * FROM usuarios
             WHERE email = :email
             AND tipo = 'admin'";
