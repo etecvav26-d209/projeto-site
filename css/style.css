@@ -1,0 +1,41 @@
+:root {
+    --cream: #F5F5DC;
+    --pink: #F8C8DC;
+    --chocolate: #332421;
+    --white: #fffdf7;
+    --border: #e7cbd5;
+    --shadow: 0 8px 22px rgba(51, 36, 33, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--chocolate);
+    background-color: var(--cream);
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--chocolate);
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
