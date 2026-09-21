@@ -33,6 +33,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['id'])) {
         ]);
 
         echo "Produto excluído com sucesso!";
+        header("Refresh: 2; URL=index.php");
 
     } catch(PDOException $erro) {
 

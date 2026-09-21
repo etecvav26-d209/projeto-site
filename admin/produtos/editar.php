@@ -51,9 +51,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome'])) {
 
         $nomeImagem = $_FILES['imagem']['name'];
 
-        $caminho = '../../img/produtos/' . $nomeImagem;
+        $caminho = '../../imagens/doces/' . $nomeImagem;
 
-        $caminhoBanco = 'img/produtos/' . $nomeImagem;
+        $caminhoBanco = 'imagens/doces/' . $nomeImagem;
 
         move_uploaded_file(
             $_FILES['imagem']['tmp_name'],
@@ -225,6 +225,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['nome'])) {
     </button>
 
 </form>
+
+<br>
+
+<a href="index.php">
+
+    <button type="button">
+        Voltar ao painel
+    </button>
+
+</a>
+
 
 <?php
 

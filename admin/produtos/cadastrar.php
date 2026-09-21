@@ -62,6 +62,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             if($id) {
 
                 echo "Produto cadastrado com sucesso! ID: " . $id;
+                header("Refresh: 2; URL=index.php");
 
             }
 
