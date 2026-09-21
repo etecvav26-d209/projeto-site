@@ -4,17 +4,29 @@ require_once "config/conexao.php";
 include 'includes/header.php';
 
 $sql = "SELECT * FROM produtos WHERE disponivel = 1";
-
 $stmt = $conexao->prepare($sql);
 $stmt->execute();
 $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+$categorias = [
+    'Doces Franceses',
+    'Doces Tradicionais',
+    'Docinhos para Eventos',
+    'Bolos para Eventos',
+    'Kits para Eventos',
+    'Bebidas'
+];
+
 ?>
 
 <div class="sanfona">
-    <input type="checkbox" id="sanfona-toggle" class="sanfona-toggle" aria-hidden="true">
-    <label for="sanfona-toggle" class="btn-sanfonado" aria-controls="sanfona-menu">Abrir Menu</label>
-    <div id="sanfona-menu" class="sanfona-content" aria-hidden="true">
+    <input type="checkbox" id="sanfona-toggle" class="sanfona-toggle">
+    <label for="sanfona-toggle" class="btn-sanfonado" aria-controls="sanfona-menu">
+        <span>Menu</span>
+        <span class="sanfona-icone">+</span>
+    </label>
+
+    <div id="sanfona-menu" class="sanfona-content">
         <ul class="sanfona-list">
             <li><a href="menu/ajuda.php">Ajuda</a></li>
             <li><a href="menu/loja.php">Loja</a></li>
@@ -23,299 +35,165 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<section id="inicio" class="banner-inicial">
+<section id="inicio" class="hero">
 
-    <img src="imagens\fundo.jpeg" alt="Imagem inicial">
+    <img src="imagens/fundo.jpeg" alt="Delícias da Noir & Sugar">
 
-    <div class="banner-conteudo">
+    <div class="hero-overlay"></div>
 
-        <h1>Bem-vindo ao Noir & Sugar</h1>
+    <div class="hero-conteudo">
+        <span class="hero-tag">CONFEITARIA ARTESANAL</span>
 
-        <p>
-            Cada mordida é uma experiência.
-        </p>
+        <h1>Bem-vindo ao <strong>Noir & Sugar</strong></h1>
 
+        <p>Cada mordida é uma experiência.</p>
+
+        <a class="hero-botao" href="#cardapio">Conheça nosso cardápio</a>
     </div>
 
 </section>
 
 <section id="galeria" class="galeria">
 
-    <h2>Nosso Trabalho</h2>
+    <div class="secao-cabecalho">
+        <span class="mini-titulo">FEITO COM CARINHO</span>
+        <h2>Nosso trabalho</h2>
+        <p>Doces preparados para transformar momentos simples em lembranças especiais.</p>
+    </div>
 
     <div class="galeria-imagens">
 
-        <img src="imagens\doces\galeria1.jpeg" alt="Nosso trabalho">
-        <img src="imagens\doces\galeria2.jpeg" alt="Nosso trabalho">
-        <img src="imagens\doces\galeria3.jpeg" alt="Nosso trabalho">
-        <img src="imagens\doces\galeria4.jpeg" alt="Nosso trabalho">
-        <img src="imagens\doces\galeria5.jpeg" alt="Nosso trabalho">
-        <img src="imagens\doces\galeria6.jpeg" alt="Nosso trabalho">
-        <img src="imagens\doces\galeria7.jpeg" alt="Nosso trabalho">
+        <figure>
+            <img src="imagens/doces/galeria1.jpeg" alt="Doce artesanal Noir & Sugar">
+        </figure>
+
+        <figure>
+            <img src="imagens/doces/galeria2.jpeg" alt="Doce artesanal Noir & Sugar">
+        </figure>
+
+        <figure>
+            <img src="imagens/doces/galeria3.jpeg" alt="Doce artesanal Noir & Sugar">
+        </figure>
+
+        <figure>
+            <img src="imagens/doces/galeria4.jpeg" alt="Doce artesanal Noir & Sugar">
+        </figure>
+
+        <figure>
+            <img src="imagens/doces/galeria5.jpeg" alt="Doce artesanal Noir & Sugar">
+        </figure>
+
+        <figure>
+            <img src="imagens/doces/galeria6.jpeg" alt="Doce artesanal Noir & Sugar">
+        </figure>
+
+        <figure>
+            <img src="imagens/doces/galeria7.jpeg" alt="Doce artesanal Noir & Sugar">
+        </figure>
 
     </div>
 
 </section>
 
-<section id="cardapio">
+<section id="cardapio" class="cardapio">
 
-    <h2>Nosso Cardápio</h2>
+    <div class="secao-cabecalho">
+        <span class="mini-titulo">ESCOLHA SEU FAVORITO</span>
+        <h2>Nosso cardápio</h2>
+        <p>Selecione os produtos que deseja adicionar ao seu pedido.</p>
+    </div>
 
     <form method="POST" action="encomendas.php">
-    <!-- DOCES FRANCESES -->
-    <h3>Doces Franceses</h3>
 
-    <?php
+        <?php foreach ($categorias as $categoria): ?>
 
-    $temproduto = false;
+            <?php
+            $produtosCategoria = array_filter($produtos, function ($produto) use ($categoria) {
+                return $produto['categoria'] === $categoria;
+            });
+            ?>
 
-    foreach ($produtos as $produto) {
-        if ($produto['categoria'] == 'Doces Franceses') {
-            $temproduto = true;
+            <div class="categoria-card">
 
-    ?>
+                <div class="categoria-titulo">
+                    <span></span>
+                    <h3><?php echo htmlspecialchars($categoria); ?></h3>
+                    <span></span>
+                </div>
 
-            <div class="produto">
-                <label>
-                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
-                        Selecionar
-                </label>
-                <h4>
-                    <?php echo $produto['nome']; ?>
-                </h4>
+                <?php if (!empty($produtosCategoria)): ?>
 
-                <p>
-                    <?php echo $produto['descricao']; ?>
-                </p>
+                    <div class="produtos-grid">
 
-                <p>
-                    R$
-                    <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
-                </p>
-            </div>
-    <?php
-        }
-    } 
-    if ($temproduto == false) {
-        echo "<p>Nenhum produto disponível nesta categoria.</p>";
-    }
-    ?>
+                        <?php foreach ($produtosCategoria as $produto): ?>
 
-     <!-- DOCES TRADICIONAIS -->
-    <h3>Doces Tradicionais</h3>
+                            <article class="produto">
 
-    <?php
+                                <?php if (!empty($produto['imagem'])): ?>
+                                    <div class="produto-imagem">
+                                        <img
+                                            src="<?php echo htmlspecialchars($produto['imagem']); ?>"
+                                            alt="<?php echo htmlspecialchars($produto['nome']); ?>"
+                                        >
+                                    </div>
+                                <?php else: ?>
+                                    <div class="produto-imagem produto-sem-imagem">
+                                        <span>✦</span>
+                                    </div>
+                                <?php endif; ?>
 
-    $temproduto = false;
+                                <div class="produto-info">
 
-    foreach ($produtos as $produto) {
-        if ($produto['categoria'] == 'Doces Tradicionais') {
-            $temproduto = true;
+                                    <div class="produto-topo">
+                                        <h4><?php echo htmlspecialchars($produto['nome']); ?></h4>
 
-    ?>
+                                        <label class="produto-selecao">
+                                            <input
+                                                type="checkbox"
+                                                name="produtos[]"
+                                                value="<?php echo (int) $produto['id']; ?>"
+                                            >
+                                            <span>Selecionar</span>
+                                        </label>
+                                    </div>
 
-            <div class="produto">
-                <label>
-                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
-                        Selecionar
-                </label>
+                                    <p class="produto-descricao">
+                                        <?php echo htmlspecialchars($produto['descricao']); ?>
+                                    </p>
 
-                <h4>
-                    <?php echo $produto['nome']; ?>
-                </h4>
+                                    <strong class="produto-preco">
+                                        R$ <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
+                                    </strong>
 
-                <p>
-                    <?php echo $produto['descricao']; ?>
-                </p>
+                                </div>
 
-                <p>
-                    R$
-                    <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
-                </p>
-            </div>
+                            </article>
 
-    <?php
-        }
-    }
-    if ($temproduto == false) {
-        echo "<p>Nenhum produto disponível nesta categoria.</p>";
-    }
-    ?>
+                        <?php endforeach; ?>
 
- <!-- DOCES PARA EVENTOS -->
-    <h3>Doces para Eventos</h3>
+                    </div>
 
-    <?php
+                <?php else: ?>
 
-    $temproduto = false;
+                    <p class="sem-produtos">Nenhum produto disponível nesta categoria.</p>
 
-    foreach ($produtos as $produto) {
-        if ($produto['categoria'] == 'Docinhos para Eventos') {
-            $temproduto = true;
+                <?php endif; ?>
 
-    ?>
-
-            <div class="produto">
-
-                <label>
-                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
-                        Selecionar
-                </label>
-
-                <h4>
-                    <?php echo $produto['nome']; ?>
-                </h4>
-
-                <p>
-                    <?php echo $produto['descricao']; ?>
-                </p>
-
-                <p>
-                    R$
-                    <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
-                </p>
             </div>
 
-    <?php
+        <?php endforeach; ?>
 
-        }
-    }
+        <div class="pedido-acao">
+            <p>Já escolheu seus favoritos?</p>
 
-    if ($temproduto == false) {
-        echo "<p>Nenhum produto disponível nesta categoria.</p>";
-    }
-    ?>
+            <button class="botao-carrinho" type="submit">
+                Adicionar ao carrinho
+                <span>→</span>
+            </button>
+        </div>
 
-    <!-- BOLOS PARA EVENTOS -->
-    <h3>Bolos para Eventos</h3>
-
-    <?php
-
-    $temproduto = false;
-
-    foreach ($produtos as $produto) {
-        if ($produto['categoria'] == 'Bolos para Eventos') {
-            $temproduto = true;
-
-    ?>
-
-            <div class="produto">
-                <label>
-                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
-                        Selecionar
-                </label>
-
-                <h4>
-                    <?php echo $produto['nome']; ?>
-                </h4>
-
-                <p>
-                    <?php echo $produto['descricao']; ?>
-                </p>
-
-                <p>
-                    R$
-                    <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
-                </p>
-            </div>
-
-    <?php
-
-        }
-    }
-
-    if ($temproduto == false) {
-        echo "<p>Nenhum produto disponível nesta categoria.</p>";
-    }
-    ?>
-
- <!-- KITS PARA EVENTOS -->
-    <h3>Kits para Eventos</h3>
-
-    <?php
-
-    $temproduto = false;
-
-    foreach ($produtos as $produto) {
-        if ($produto['categoria'] == 'Kits para Eventos') {
-            $temproduto = true;
-    ?>
-
-            <div class="produto">
-                <label>
-                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
-                        Selecionar
-                </label>
-
-                <h4>
-                    <?php echo $produto['nome']; ?>
-                </h4>
-
-                <p>
-                    <?php echo $produto['descricao']; ?>
-                </p>
-
-                <p>
-                    R$
-                    <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
-                </p>
-            </div>
-
-    <?php
-
-        }
-    }
-
-    if ($temproduto == false) {
-        echo "<p>Nenhum produto disponível nesta categoria.</p>";
-    }
-    ?>
-
-    <!-- BEBIDAS -->
-    <h3>Bebidas</h3>
-
-    <?php
-
-    $temproduto = false;
-
-    foreach ($produtos as $produto) {
-        if ($produto['categoria'] == 'Bebidas') {
-            $temproduto = true;
-    ?>
-
-            <div class="produto">
-                <label>
-                    <input type="checkbox" name="produtos[]" value="<?php echo $produto['id']; ?>">
-                        Selecionar
-                </label>
-
-                <h4>
-                    <?php echo $produto['nome']; ?>
-                </h4>
-
-                <p>
-                    <?php echo $produto['descricao']; ?>
-                </p>
-
-                <p>
-                    R$
-                    <?php echo number_format($produto['preco'], 2, ',', '.'); ?>
-                </p>
-            </div>
-
-    <?php
-        }
-    }
-
-    if ($temproduto == false) {
-        echo "<p>Nenhum produto disponível nesta categoria.</p>";
-    }
-    ?>
-
-        <button type="submit">
-            Adicionar ao carrinho
-        </button>
     </form>
+
 </section>
 
 <?php
