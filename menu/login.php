@@ -58,6 +58,17 @@ if(isset($_POST['login'])) {
     </button>
 </form>
 
+<p>
+    Ainda não possui uma conta?
+</p>
+
+<a href="criarconta.php">
+    <button type="button">
+        Criar conta
+    </button>
+</a>
+
+
 <?php
 include '../includes/footer.php';
 ?>
