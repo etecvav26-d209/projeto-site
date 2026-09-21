@@ -20,10 +20,10 @@
 </div>
 
  <nav class="nav">
-        <a href="index.php#inicio">Início</a>
-        <a href="index.php#galeria">Galeria</a>
-        <a href="index.php#cardapio">Cardápio</a>
-        <a href="encomendas.php">Carrinho</a>
+        <a href="../index.php#inicio">Início</a>
+        <a href="../index.php#galeria">Galeria</a>
+        <a href="../index.php#cardapio">Cardápio</a>
+        <a href="../encomendas.php">Carrinho</a>
     </nav>
 
 </header>
