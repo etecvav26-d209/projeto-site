@@ -31,3 +31,29 @@ if(isset($_POST['login'])) {
     }
 }
 ?>
+
+<h1>Login</h1>
+
+<form method="POST" action="login.php">
+
+    <label>
+        Email:
+    </label>
+
+    <input
+        type="email" name="email" required>
+
+    <br><br>
+
+    <label>
+        Senha:
+    </label>
+
+    <input type="password" name="senha" required>
+
+    <br><br>
+
+    <button type="submit" name="login">
+        Entrar
+    </button>
+</form>
