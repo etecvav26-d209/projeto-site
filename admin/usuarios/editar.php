@@ -47,6 +47,8 @@ $nome = $_POST['nome'];
 
     WHERE id = :id";
 
+    $stmt = $conexao->prepare($sql);
+
 try {
 
         $stmt->execute([
@@ -132,6 +134,17 @@ try {
     </button>
 
 </form>
+
+<br>
+
+<a href="../index.php">
+
+    <button type="button">
+        Voltar ao painel
+    </button>
+
+</a>
+
 
 <?php
 

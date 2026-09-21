@@ -47,6 +47,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if($id) {
 
         echo "Usuário cadastrado com sucesso! ID: " . $id;
+         header("Refresh: 2; URL=../index.php");
 
     }
 
