@@ -33,3 +33,48 @@ if(isset($_POST['cadastrar'])) {
     }
 }
 ?>
+
+<h1>Criar Conta</h1>
+
+<p>
+    Preencha os dados abaixo para criar sua conta.
+</p>
+
+<form method="POST" action="cadastro.php">
+
+    <label>
+        Nome:
+    </label>
+
+    <input type="text" name="nome" required>
+
+    <br><br>
+
+    <label>
+        Email:
+    </label>
+
+    <input type="email" name="email" required>
+
+    <br><br>
+
+    <label>
+        Senha:
+    </label>
+
+    <input type="password" name="senha" required>
+
+    <br><br>
+
+    <button type="submit" name="cadastrar">
+        Criar conta
+    </button>
+</form>
+
+<p>
+    Já possui uma conta?
+    <a href="login.php">
+        Fazer login
+    </a>
+</p>
+
