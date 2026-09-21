@@ -53,6 +53,12 @@ textarea {
     box-shadow: 0 2px 10px rgba(51, 36, 33, 0.06);
 }
 
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .logo img {
     width: 105px;
     height: auto;
