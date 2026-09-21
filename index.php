@@ -23,11 +23,21 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<h1>Bem-vindo ao Noir & Sugar</h1>
+<section id="inicio" class="banner-inicial">
 
-<p>
-    Cada mordida é uma experiência.
-</p>
+    <img src="img/banners/imagem-inicial.jpg" alt="Imagem inicial">
+
+    <div class="banner-conteudo">
+
+        <h1>Bem-vindo ao Noir & Sugar</h1>
+
+        <p>
+            Cada mordida é uma experiência.
+        </p>
+
+    </div>
+
+</section>
 
 <section id="cardapio">
 
