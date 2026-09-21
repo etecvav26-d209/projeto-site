@@ -21,7 +21,7 @@ if (!isset($_POST['id'])) {
     exit;
 }
 
-$_POST['id'];
+$id = $_POST['id'];
 
 $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
         FROM pedidos
@@ -29,8 +29,24 @@ $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
         ON pedidos.usuario_id = usuarios.id
         WHERE pedidos.id = :id";
 
-        $stmt_itens = $conexao->prepare($sql_itens);
-        $stmt_itens->execute([':pedido_id' => $id]);
+        $stmt = $conexao->prepare($sql);
+$stmt->execute([
+    ':id' => $id
+]);
+$pedido = $stmt->fetch(PDO::FETCH_ASSOC);
+$sql_itens = "SELECT itens.*, produtos.nome
+              FROM itens
+              INNER JOIN produtos
+              ON itens.produto_id = produtos.id
+              WHERE itens.pedido_id = :pedido_id";
+
+$stmt_itens = $conexao->prepare($sql_itens);
+
+$stmt_itens->execute([
+    ':pedido_id' => $id
+]);
+
+$itens = $stmt_itens->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -55,7 +71,7 @@ $sql = "SELECT pedidos.*, usuarios.nome, usuarios.email
     </p> 
     
     <p> 
-        <strong>Observações:</strong> <?= $pedido['observacoes'] ?> 
+        <strong>Observações:</strong> <?= $pedido['observa'] ?>
     </p> 
     
     <p> 
